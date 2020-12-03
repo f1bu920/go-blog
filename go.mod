@@ -42,4 +42,5 @@ replace (
 	github.com/EDDYCJY/go-gin-example/pkg/setting => ../go-application/go-gin-example/pkg/setting
 	github.com/EDDYCJY/go-gin-example/pkg/util => ../go-application/go-gin-example/pkg/util
 	github.com/EDDYCJY/go-gin-example/routers => ../go-application/go-gin-example/routers
+	github.com/EDDYCJY/go-gin-example/pkg/file => ../go-gin-example/pkg/file
 )
