@@ -22,24 +22,17 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd060923-bcb2-41f9-a2be-6dfc16ac1b4e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/pkg/file/file.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runtime/logs/log20201127.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runtime/logs/log20201203.log" afterDir="false" />
+    <list default="true" id="cd060923-bcb2-41f9-a2be-6dfc16ac1b4e" name="Default Changelist" comment="进行统一配置、定制gorm回调">
+      <change afterPath="$PROJECT_DIR$/pkg/upload/image.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/util/md5.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/routers/api/upload.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime/logs/log20201204.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime/upload/images/1bb87d41d15fe27b500a4bfcde01bb0e.png" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/conf/app.ini" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.ini" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/article.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/models.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/models.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/models/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/tag.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/logging/file.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/logging/file.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/logging/log.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/logging/log.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/setting/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/setting/setting.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/jwt.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/jwt.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pkg/util/pagination.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/util/pagination.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/e/code.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/e/code.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/e/msg.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/e/msg.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/api/v1/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/v1/article.go" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routers/api/v1/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/v1/tag.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -57,6 +50,12 @@
   </component>
   <component name="GOROOT" path="C:\Go" />
   <component name="Git.Settings">
+    <option name="PUSH_TAGS">
+      <GitPushTagMode>
+        <option name="argument" value="--tags" />
+        <option name="title" value="All" />
+      </GitPushTagMode>
+    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="GoLibraries">
@@ -122,6 +121,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
+    <MESSAGE value="进行统一配置、定制gorm回调" />
+    <option name="LAST_COMMIT_MESSAGE" value="进行统一配置、定制gorm回调" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -143,26 +144,30 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="847" y="379" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606113030625" />
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom" timestamp="1606475865631">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1607089529201">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1606475865631" />
-    <state width="1877" height="282" key="GridCell.Tab.0.center" timestamp="1606475865631">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607089529201" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1607089529200">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1606475865631" />
-    <state width="1877" height="282" key="GridCell.Tab.0.left" timestamp="1606475865631">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607089529200" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1607089529200">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1606475865631" />
-    <state width="1877" height="282" key="GridCell.Tab.0.right" timestamp="1606475865631">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607089529200" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1607089529200">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="282" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1606475865631" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607089529200" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1606360567500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606360567500" />
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606997383904">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606997383904" />
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606360538599">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>

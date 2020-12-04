@@ -3,11 +3,13 @@ package routers
 import (
 	_ "github.com/EDDYCJY/go-gin-example/docs"
 	"github.com/EDDYCJY/go-gin-example/middleware/jwt"
+	"github.com/EDDYCJY/go-gin-example/pkg/upload"
 	"github.com/EDDYCJY/go-gin-example/routers/api"
 	v1 "github.com/EDDYCJY/go-gin-example/routers/api/v1"
 	"github.com/gin-gonic/gin"
 	ginSwagger "github.com/swaggo/gin-swagger"
 	"github.com/swaggo/gin-swagger/swaggerFiles"
+	"net/http"
 )
 
 func InitRouter() *gin.Engine {
@@ -23,6 +25,11 @@ func InitRouter() *gin.Engine {
 	apiv1 := r.Group("api/v1")
 	//获取token
 	r.GET("/auth", api.GetAuth)
+
+	//上传图片
+	r.POST("/upload", api.UploadImage)
+
+	r.StaticFS("/upload/images", http.Dir(upload.GetImageFullPath()))
 
 	apiv1.Use(jwt.JWT())
 	{
