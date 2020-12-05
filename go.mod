@@ -14,6 +14,7 @@ require (
 	github.com/go-openapi/swag v0.19.12 // indirect
 	github.com/go-playground/validator/v10 v10.4.1 // indirect
 	github.com/golang/protobuf v1.4.3 // indirect
+	github.com/gomodule/redigo v2.0.0+incompatible
 	github.com/jinzhu/gorm v1.9.16
 	github.com/shiena/ansicolor v0.0.0-20200904210342-c7312218db18 // indirect
 	github.com/swaggo/gin-swagger v1.3.0
@@ -37,10 +38,10 @@ replace (
 	github.com/EDDYCJY/go-gin-example/models => ../go-application/go-gin-example/models
 	github.com/EDDYCJY/go-gin-example/pkg => ../go-application/go-gin-example/pkg/setting
 	github.com/EDDYCJY/go-gin-example/pkg/e => ../go-application/go-gin-example/pkg/e
+	github.com/EDDYCJY/go-gin-example/pkg/file => ../go-gin-example/pkg/file
 	//github.com/EDDYCJY/go-gin-example/routers/api/v1 => ../go-application/go-gin-example/routers/api/v1
 	github.com/EDDYCJY/go-gin-example/pkg/logging => ../go-application/go-gin-example/pkg/logging
 	github.com/EDDYCJY/go-gin-example/pkg/setting => ../go-application/go-gin-example/pkg/setting
 	github.com/EDDYCJY/go-gin-example/pkg/util => ../go-application/go-gin-example/pkg/util
 	github.com/EDDYCJY/go-gin-example/routers => ../go-application/go-gin-example/routers
-	github.com/EDDYCJY/go-gin-example/pkg/file => ../go-gin-example/pkg/file
 )

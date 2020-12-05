@@ -22,17 +22,32 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="cd060923-bcb2-41f9-a2be-6dfc16ac1b4e" name="Default Changelist" comment="进行统一配置、定制gorm回调">
-      <change afterPath="$PROJECT_DIR$/pkg/upload/image.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pkg/util/md5.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/routers/api/upload.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runtime/logs/log20201204.log" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/runtime/upload/images/1bb87d41d15fe27b500a4bfcde01bb0e.png" afterDir="false" />
+    <list default="true" id="cd060923-bcb2-41f9-a2be-6dfc16ac1b4e" name="Default Changelist" comment="实现图片上传、添加文章封面图片">
+      <change afterPath="$PROJECT_DIR$/pkg/app/form.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/app/request.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/app/response.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/e/cache.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/pkg/gredis/redis.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/runtime/logs/log20201205.log" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/article_service/article.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/auth_service/auth.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/cache_service/article.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/cache_service/tag.go" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/service/tag_service/tag.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/conf/app.ini" beforeDir="false" afterPath="$PROJECT_DIR$/conf/app.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.mod" beforeDir="false" afterPath="$PROJECT_DIR$/go.mod" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/go.sum" beforeDir="false" afterPath="$PROJECT_DIR$/go.sum" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/main.go" beforeDir="false" afterPath="$PROJECT_DIR$/main.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/models/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/article.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/auth.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/models/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/models/tag.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/e/code.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/e/code.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pkg/e/msg.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/e/msg.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pkg/setting/setting.go" beforeDir="false" afterPath="$PROJECT_DIR$/pkg/setting/setting.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/api/auth.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/auth.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/api/v1/article.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/v1/article.go" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/routers/api/v1/tag.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/api/v1/tag.go" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routers/router.go" beforeDir="false" afterPath="$PROJECT_DIR$/routers/router.go" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -122,7 +137,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="进行统一配置、定制gorm回调" />
-    <option name="LAST_COMMIT_MESSAGE" value="进行统一配置、定制gorm回调" />
+    <MESSAGE value="实现图片上传、添加文章封面图片" />
+    <option name="LAST_COMMIT_MESSAGE" value="实现图片上传、添加文章封面图片" />
   </component>
   <component name="VgoProject">
     <integration-enabled>true</integration-enabled>
@@ -144,33 +160,33 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="847" y="379" key="EnvironmentVariablesDialog/0.0.1920.1040@0.0.1920.1040" timestamp="1606113030625" />
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1607089529201">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom" timestamp="1607165809912">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607089529201" />
-    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1607089529200">
+    <state width="1877" height="281" key="GridCell.Tab.0.bottom/0.0.1920.1040@0.0.1920.1040" timestamp="1607165809912" />
+    <state width="1877" height="281" key="GridCell.Tab.0.center" timestamp="1607165809912">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607089529200" />
-    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1607089529200">
+    <state width="1877" height="281" key="GridCell.Tab.0.center/0.0.1920.1040@0.0.1920.1040" timestamp="1607165809912" />
+    <state width="1877" height="281" key="GridCell.Tab.0.left" timestamp="1607165809912">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607089529200" />
-    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1607089529200">
+    <state width="1877" height="281" key="GridCell.Tab.0.left/0.0.1920.1040@0.0.1920.1040" timestamp="1607165809912" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right" timestamp="1607165809912">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607089529200" />
+    <state width="1877" height="281" key="GridCell.Tab.0.right/0.0.1920.1040@0.0.1920.1040" timestamp="1607165809912" />
     <state x="461" y="164" key="SettingsEditor" timestamp="1606360567500">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="461" y="164" key="SettingsEditor/0.0.1920.1040@0.0.1920.1040" timestamp="1606360567500" />
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1606997383904">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2" timestamp="1607092887567">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1606997383904" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1606360538599">
+    <state x="552" y="252" key="Vcs.Push.Dialog.v2/0.0.1920.1040@0.0.1920.1040" timestamp="1607092887567" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1607159108862">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1606360538599" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040@0.0.1920.1040" timestamp="1607159108862" />
   </component>
 </project>

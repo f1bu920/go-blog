@@ -24,7 +24,7 @@ func InitRouter() *gin.Engine {
 
 	apiv1 := r.Group("api/v1")
 	//获取token
-	r.GET("/auth", api.GetAuth)
+	r.POST("/auth", api.GetAuth)
 
 	//上传图片
 	r.POST("/upload", api.UploadImage)
